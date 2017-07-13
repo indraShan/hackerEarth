@@ -5,9 +5,7 @@ int main()
 {
     string input;
     getline(cin, input);
-   
     int length = input.length();
-    
     for (int counter = 0; counter < length; counter++) {
 		// If uppercase, add 32
         if (input[counter] >= 65 && input[counter] < 91) {
