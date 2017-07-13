@@ -10,9 +10,11 @@ int main()
     int length = input.length();
     
     for (int counter = 0; counter < length; counter++) {
+		// If uppercase, add 32
         if (array[counter] >= 65 && array[counter] < 91) {
             input[counter] += 32;
         }
+		// If lower case, substract 32.
         else if (array[counter] >= 97 && array[counter] < 123) {
             input[counter] -= 32;
         }
