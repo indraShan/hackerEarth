@@ -5,17 +5,16 @@ int main()
 {
     string input;
     getline(cin, input);
-    
-    const char *array = input.c_str();
+   
     int length = input.length();
     
     for (int counter = 0; counter < length; counter++) {
 		// If uppercase, add 32
-        if (array[counter] >= 65 && array[counter] < 91) {
+        if (input[counter] >= 65 && input[counter] < 91) {
             input[counter] += 32;
         }
 		// If lower case, substract 32.
-        else if (array[counter] >= 97 && array[counter] < 123) {
+        else if (input[counter] >= 97 && input[counter] < 123) {
             input[counter] -= 32;
         }
     }
