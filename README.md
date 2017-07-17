@@ -5,5 +5,5 @@ Repo that stores all my HackerEarth solutions.
 
 Toggle Strings  
 Palindromic String  
-Find Product
+Find Product  
 Prime numbers
