@@ -20,11 +20,11 @@ int main() {
 	}
 	
 	for (int counter = 2; counter <= pow(input, 0.5); counter++) {
-		for (int divisor = 2; divisor <= input; divisor++) {
-			if (counter * divisor > input) {
-				break;
-			}
-			else if (primes[counter * divisor] == 0) {
+		if (primes[counter] == 0) {
+			continue;
+		}
+		for (int divisor = 2; counter * divisor <= input; divisor++) {
+			if (primes[counter * divisor] == 0) {
 				continue;
 			}
 			primes[counter * divisor] = 0;
