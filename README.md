@@ -8,3 +8,4 @@ Palindromic String
 Find Product  
 Prime numbers  
 Roy and Profile Picture  
+Count Divisors  
