@@ -10,3 +10,4 @@ Prime numbers
 Roy and Profile Picture  
 Count Divisors  
 ASCII Value  
+Factorial
