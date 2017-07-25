@@ -10,4 +10,7 @@ Prime numbers
 Roy and Profile Picture  
 Count Divisors  
 ASCII Value  
-Factorial
+Factorial  
+Seating Arrangement  
+Life, the Universe, and Everything  
+Magical Word  
