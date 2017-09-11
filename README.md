@@ -13,4 +13,6 @@ ASCII Value
 Factorial  
 Seating Arrangement  
 Life, the Universe, and Everything  
-Magical Word  
+Magical Word 
+Breakup App 
+Monk Takes a Walk 
