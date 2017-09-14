@@ -19,3 +19,5 @@ Monk Takes a Walk
 Min-Max  
 Square Transaction    
 Manna's First Name  
+Simple Search  
+Rest in peace - 21-1!  
