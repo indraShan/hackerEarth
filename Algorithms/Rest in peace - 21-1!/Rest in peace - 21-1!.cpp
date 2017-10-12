@@ -3,7 +3,7 @@
 #include <cmath>
 
 bool numberContainsDigit(int number, int digit);
-int hash(const char *input, int start, int end, int inputSize, char previous, char next, int previousHash);
+int hash(const char *input, int start, int end, char previous, char next, int previousHash);
 
 int main () {
 
@@ -14,25 +14,6 @@ int main () {
 	for (int counter = 0; counter < cases; counter++) {
 		std::cin >> numbers[counter];
 	}
-	
-	// Indrajit
-	// char test[3] = {'a','j','i'};
-	//
-	// char pattern[3] = {'j', 'i', 't'};
-	//
-	// int key = hash(pattern, 3, '\0', '\0', 0);
-	//
-	// std::cout << "Pattern hash = " << key << std::endl;
-	//
-	// key = hash(test, 3, '\0', '\0', 0);
-	//
-	// std::cout << "aji hash = " << key << std::endl;
-	//
-	// char match[3] = {'j', 'i', 't'};
-	//
-	// key = hash(match, 3, 'a', 't', key);
-	//
-	// std::cout << "jit hash = " << key << std::endl;
 
 	for (int counter = 0; counter < cases; counter++) {
 		if (numbers[counter] % 21 == 0 || numberContainsDigit(numbers[counter], 21) == true) {
@@ -73,7 +54,7 @@ int main () {
 // 	return false;
 // }
 
-int hash(const char *input, int start, int end, int inputSize, char previous, char next, int previousHash) {
+int hash(const char *input, int start, int end, char previous, char next, int previousHash) {
 	int hash = 0;
 	if (previous == '\0' && next == '\0') {
 		for (int counter = end-1; counter >= start; counter--) {
@@ -91,18 +72,18 @@ bool numberContainsDigit(int number, int digit) {
 	std::string string = std::to_string(number);
 	std::string pattern = std::to_string(digit);
 	
-	const char*  stringArray = string.c_str();
+	const char* stringArray = string.c_str();
 	const char* patternArray = pattern.c_str();
 	
 	int stringLength = string.length();
 	int patternLength = pattern.length();
 	
-	int patternHash = hash(patternArray, 0, patternLength, patternLength, '\0', '\0', 0);	
-	int currentHash = hash(stringArray, 0, patternLength, patternLength, '\0', '\0', 0);
+	int patternHash = hash(patternArray, 0, patternLength, '\0', '\0', 0);	
+	int currentHash = hash(stringArray, 0, patternLength, '\0', '\0', 0);
 	
 	for (int counter = 0; counter < stringLength; counter++) {
 		if (counter > 0) {
-			currentHash = hash(stringArray, counter, counter+patternLength, patternLength, stringArray[counter - 1], stringArray[counter + patternLength - 1], currentHash);
+			currentHash = hash(stringArray, counter, counter+patternLength, stringArray[counter - 1], stringArray[counter + patternLength - 1], currentHash);
 		}
 		if (currentHash == patternHash) {
 			int subCounter = 0;
